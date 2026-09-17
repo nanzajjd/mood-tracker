@@ -7,11 +7,55 @@
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <!-- Шапка з назвою застосунку -->
-    <!-- Форма відмітки поточного настрою -->
-    <!-- Блок історії записів за датами -->
-    <!-- Блок простої статистики -->
-    <!-- Підвал -->
+    <header>
+      <h1>Трекер настрою</h1>
+      <nav>
+        <a href="#mark-mood">Відмітити настрій</a>
+        <a href="#history">Історія записів</a>
+      </nav>
+    </header>
+
+    <main>
+      <section id="mark-mood">
+        <h2>Відмітити настрій</h2>
+        <form>
+          <label for="mood">Оберіть настрій:</label>
+          <select id="mood" name="mood">
+            <option value="happy">Веселий</option>
+            <option value="calm">Спокійний</option>
+            <option value="tired">Втомлений</option>
+            <option value="sad">Сумний</option>
+          </select>
+
+          <label for="comment">Коментар:</label>
+          <textarea id="comment" name="comment"></textarea>
+
+          <button type="submit">Зберегти</button>
+        </form>
+      </section>
+
+      <section id="history">
+        <h2>Історія записів</h2>
+        <article>
+          <h3>7 січня 2026</h3>
+          <p>Настрій: втомлений</p>
+          <p>день був насичений, але був продуктивний</p>
+        </article>
+        <article>
+          <h3>8 січня 2026</h3>
+          <p>Настрій: веселий</p>
+          <p>День був святковим та подарував позитивні емоції</p>
+        </article>
+      </section>
+    </main>
+    <aside>
+      <h2>Коротка статистика</h2>
+      <p>Усього записів: 2</p>
+      <p>Загальний настрій: змішаний</p>
+    </aside>
+    <footer>
+      <p>Навчальний проєкт "Трекер настрою"</p>
+    </footer>
 
     <script src="js/app.js"></script>
   </body>
