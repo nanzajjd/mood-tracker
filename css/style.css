@@ -1,0 +1,70 @@
+*, *::before, *::after{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    font-family: system-ui, sans-serif;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #2f2a35;
+    background-color: #f8f3fc;
+}
+header{
+    padding: 14px;
+    background-color: #d9c2f0;
+    border-bottom: 2px solid #b89bd4;
+}
+header h1 {
+    margin: 0 0 12px;
+    font-size: 2.5rem;
+    color: #3f3150;
+}
+nav a{
+    margin-right: 16px;
+    color: #4f3d63;
+    text-decoration: none;
+}
+nav a:hover{
+    text-decoration: underline;
+}
+main{
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 24px;
+}
+section{
+    margin-bottom: 14px;
+}
+.card{
+    padding:14px;
+    margin-bottom: 12px;
+    border-radius: 16px;
+    background-color: #dff5e8;
+}
+aside{
+    max-width: 900px;
+    margin: 0 auto 24px;
+    padding: 20px;
+    background-color: #fde2d2;
+    border: 1px solid #e7bfae;
+    border-radius: 16px;
+    text-align: center;
+}
+footer{
+    padding:16px;
+    background-color: #e9def2;
+    color: #6b6170;
+    font-size: 0.875rem;
+    text-align: center;
+}
+form label {
+  display: block;
+  margin-bottom: 8px;
+}
+
+form select,
+form textarea {
+  display: block;
+  padding: 10px;
+  margin-bottom: 16px;
+}
