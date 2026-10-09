@@ -10,9 +10,20 @@ body{
     background-color: #f8f3fc;
 }
 header{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 12px;
     padding: 14px;
     background-color: #d9c2f0;
     border-bottom: 2px solid #b89bd4;
+}
+nav{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
 }
 header h1 {
     margin: 0 0 12px;
@@ -20,7 +31,7 @@ header h1 {
     color: #3f3150;
 }
 nav a{
-    margin-right: 16px;
+    margin-right: 0;
     color: #4f3d63;
     text-decoration: none;
 }
@@ -67,4 +78,56 @@ form textarea {
   display: block;
   padding: 10px;
   margin-bottom: 16px;
+}
+
+.cards{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 12px;
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+}
+
+@media(min-width: 600px){
+    header{
+        flex-direction: row;
+        align-items: center;
+    }
+
+    header h1{
+        margin-bottom: 0;
+    }
+    nav{
+        flex-direction: row;
+    }
+
+    .cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media(min-width: 1024px){
+    .layout{
+        display: grid;
+        grid-template-columns: 3fr 1fr;
+        gap: 24px;
+        max-width:1200px;
+        margin: 0 auto;
+        padding: 24px;
+        align-items: start;
+    }
+
+    .layout main{
+        max-width:none;
+        margin: 0;
+        padding: 0;
+    }
+
+    .layout aside{
+        max-width: none;
+        margin: 0;
+    }
 }
