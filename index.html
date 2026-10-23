@@ -16,48 +16,58 @@
     </header>
 
     <div class="layout">
-    <main>
-      <section id="mark-mood">
-        <h2>Відмітити настрій</h2>
-        <form>
-          <label for="mood">Оберіть настрій:</label>
-          <select id="mood" name="mood">
-            <option value="happy">Веселий</option>
-            <option value="calm">Спокійний</option>
-            <option value="tired">Втомлений</option>
-            <option value="sad">Сумний</option>
-          </select>
+      <main>
+        <section id="mark-mood">
+          <h2>Відмітити настрій</h2>
+          <form>
+            <label for="mood">Оберіть настрій:</label>
 
-          <label for="comment">Коментар:</label>
-          <textarea id="comment" name="comment"></textarea>
+            <select id="mood" name="mood">
+              <option value="very-sad">Дуже сумний</option>
+              <option value="sad">Сумний</option>
+              <option value="calm">Спокійний</option>
+              <option value="happy">Веселий</option>
+              <option value="very-happy">Дуже веселий</option>
+            </select>
 
-          <button type="submit">Зберегти</button>
-        </form>
-      </section>
+            <div class="mood-scale" aria-label="Шкала Настрою">
+            <span class="mood mood--very-sad">Дуже сумний</span>
+            <span class="mood mood--sad">Сумний</span>
+            <span class="mood mood--calm">Спокійний</span>
+            <span class="mood mood--happy">Веселий</span>
+            <span class="mood mood--very-happy">Дуже веселий</span>
+            </div>
 
-      <section id="history">
-        <h2>Історія записів</h2>
+            <label for="comment">Коментар:</label>
+            <textarea id="comment" name="comment"></textarea>
 
-        <div class="cards">
-        <article class="card">
-          <h3>7 січня 2026</h3>
-          <p>Настрій: втомлений</p>
-          <p>День був насичений, але продуктивний</p>
-        </article>
-        <article class="card">
-          <h3>8 січня 2026</h3>
-          <p>Настрій: веселий</p>
-          <p>День був святковим та подарував позитивні емоції</p>
-        </article>
-      </div>
-      </section>
-    </main>
+            <button type="submit">Зберегти</button>
+          </form>
+        </section>
 
-    <aside>
-      <h2>Підсумок</h2>
-      <p>Усього записів: 2</p>
-      <p>Загальний настрій: змішаний</p>
-    </aside>
+        <section id="history">
+          <h2>Історія записів</h2>
+
+          <div class="cards">
+            <article class="card card--sad">
+              <h3>7 січня 2026</h3>
+              <p>Настрій: Сумний</p>
+              <p>День був насичений, але продуктивний</p>
+            </article>
+            <article class="card card--happy">
+              <h3>8 січня 2026</h3>
+              <p>Настрій: Веселий</p>
+              <p>День був святковим та подарував позитивні емоції</p>
+            </article>
+          </div>
+        </section>
+      </main>
+
+      <aside>
+        <h2>Підсумок</h2>
+        <p>Усього записів: 2</p>
+        <p>Загальний настрій: змішаний</p>
+      </aside>
     </div>
 
     <footer>
