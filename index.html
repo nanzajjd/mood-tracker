@@ -20,16 +20,19 @@
       <main>
         <section id="mark-mood">
           <h2>Відмітити настрій</h2>
-          <form>
+          <form id="mood-form">
+            <label for="date">Дата:</label>
+            <input id="date" name="date" type="date" required />
             <label for="mood">Оберіть настрій:</label>
 
-            <select id="mood" name="mood">
-              <option value="very-sad">Дуже сумний</option>
-              <option value="sad">Сумний</option>
-              <option value="calm">Спокійний</option>
-              <option value="happy">Веселий</option>
-              <option value="very-happy">Дуже веселий</option>
-            </select>
+            <input
+              id="mood"
+              name="mood"
+              type="number"
+              min="1"
+              max="5"
+              required
+            />
 
             <div class="mood-scale" aria-label="Шкала Настрою">
               <span class="mood mood--very-sad">Дуже сумний</span>
@@ -39,8 +42,9 @@
               <span class="mood mood--very-happy">Дуже веселий</span>
             </div>
 
-            <label for="comment">Коментар:</label>
-            <textarea id="comment" name="comment"></textarea>
+            <label for="note">Коментар:</label>
+            <input id="note" name="note" type="text" maxlength="200"/>
+            <span id="note-counter">200</span>
 
             <button type="submit">Зберегти</button>
           </form>

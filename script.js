@@ -34,6 +34,47 @@ const moodEntries = [
 ];
 
 const listContainer = document.querySelector("#mood-history");
+const form = document.querySelector("#mood-form");
+
+// Обробляє надсилання форми без перезавантаження: зчитує поля, додає новий запис у масив, перемальовує список і очищає форму.
+form.addEventListener("submit", (event) => {
+  event.preventDefault();
+  const date = document.querySelector("#date").value;
+  const mood = Number(document.querySelector("#mood").value);
+  const note = document.querySelector("#note").value.trim();
+  const newEntry = {
+    date: date,
+    mood: mood,
+    note: note,
+  };
+  moodEntries.push(newEntry);
+  renderMoodHistory(moodEntries);
+  form.reset();
+  noteCounter.textContent = 200;
+  console.log(moodEntries);
+});
+
+const moodInput = document.querySelector("#mood");
+
+// Під час введення перевіряє, що настрій у межах 1-5, і показує власне повідомлення про помилку.
+moodInput.addEventListener("input", () => {
+  if (
+    moodInput.value !== "" &&
+    (Number(moodInput.value) < 1 || Number(moodInput.value) > 5)
+  ) {
+    moodInput.setCustomValidity("Настрій має бути від 1 до 5");
+  } else {
+    moodInput.setCustomValidity("");
+  }
+});
+
+const noteInput = document.querySelector("#note");
+const noteCounter = document.querySelector("#note-counter");
+
+// На кожне натискання клавіші оновлює лічильник символів, що залишилися до ліміту 200.
+noteInput.addEventListener("input", () => {
+  noteCounter.textContent = 200 - noteInput.value.length;
+});
 
 console.log("Записи настрою:", moodEntries);
 
@@ -107,5 +148,5 @@ function renderMoodHistory(entries) {
   }
 }
 renderMoodHistory(moodEntries);
-const averageMoodElement = document.querySelector('#avg-mood');
-averageMoodElement.textContent = 'Середній настрій: ' + averageMood;
+const averageMoodElement = document.querySelector("#avg-mood");
+averageMoodElement.textContent = "Середній настрій: " + averageMood;
